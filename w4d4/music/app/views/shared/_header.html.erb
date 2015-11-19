@@ -1,0 +1,8 @@
+<% if current_user.nil? %>
+  <%= link_to "Log in!", new_session_url %>
+  <br>
+  <%= link_to "Sign up!", new_user_url %>
+<% else %>
+  Hello <%= current_user.email %>
+  <%= button_to "Logout", session_url, method: :delete %>
+<% end %>
