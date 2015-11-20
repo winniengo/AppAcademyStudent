@@ -1,6 +1,6 @@
 <% action = (album.persisted? ? album_url(album) : albums_url) %>
 <% method = (album.persisted? ? :patch : :post) %>
-<% submit_text = (album.persisted? ? 'Update' : 'Create ') + 'album!' %>
+<% submit_text = (album.persisted? ? 'Update' : 'Create ') + ' album!' %>
 
 <form action="<%= action %>" method="post">
   <input type="hidden" name="_method" value="<%= method %>">
@@ -16,11 +16,17 @@
 
 <br>
 <label for="album_band">Band:</label>
-  <input
-    type="text"
-    name="album[band_id]"
-    id="album_band_id"
-    value="<%= album.band_name %>">
+  <select name="album[band_id]" id="album_band_id">
+    <option></option>
+  
+    <% bands.each do |band| %>
+      <option <%= album.band_id == band.id ? "selected" : "" %> 
+        value="<%=band.id%>">
+      <%= band.name %>
+      </option>
+    <% end %>
+  </select>
+
 
 
 
