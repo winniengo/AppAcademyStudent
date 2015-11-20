@@ -9,5 +9,9 @@ class Track < ActiveRecord::Base
 		primary_key: :id,
 		class_name: "Album"
 
+	def album_name
+		album.album_name
+	end
+
 end
 

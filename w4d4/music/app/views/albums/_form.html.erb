@@ -27,10 +27,21 @@
     <% end %>
   </select>
 
+<br>
+<label for="album_status">Status:</label>
+  <input type="radio"
+    name="album[status]"
+    value="LIVE"
+    id="album_status_live"
+    <%= album.status == "LIVE" ? "checked" : "" %>>
+  <label>Live</label>
+  <input type="radio"
+    name="album[status]"
+    value="STUDIO"
+    id="album_status_live"
+    <%= album.status == "STUDIO" ? "checked" : "" %>>
+  <label>Studio</label>
 
-
-
-  <br>
   <br>
   <input type="submit" value="<%= submit_text %>">
 </form>
