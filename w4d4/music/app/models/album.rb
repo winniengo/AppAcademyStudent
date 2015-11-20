@@ -15,8 +15,8 @@ class Album < ActiveRecord::Base
 		class_name: "Track",
 		dependent: :destroy
 
-	# def band_name
-	# 	band.name
-	# end
+	def band_name
+		band.name
+	end
 
 end

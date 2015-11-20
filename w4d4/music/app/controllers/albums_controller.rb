@@ -16,6 +16,7 @@ def index
 
   def new
     @album = Album.new
+    @bands = Band.all
   end
 
   def show
@@ -27,6 +28,7 @@ def index
 
   def edit
     @album = Album.find(params[:id])
+    @bands = Band.all
   end
 
   def update

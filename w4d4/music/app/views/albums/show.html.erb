@@ -1,7 +1,9 @@
-<h1>Album Profile</h1>
+<h1>Album Info</h1>
 
 <%= render "shared/profile", obj: @album, attributes: [:album_name, :status, :band_id] %>
 <!-- TODO: band name -->
 
 <br>
 <%= link_to "Edit album", edit_album_url(@album) %>
+<br>
+<%= link_to "Back to albums", albums_url %>
