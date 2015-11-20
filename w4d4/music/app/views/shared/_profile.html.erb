@@ -1,0 +1,9 @@
+<!-- TODO: remove table -->
+<table>
+  <% attributes.each do |attr_name| %>
+    <tr>
+      <td><%= attr_name %>: </td>
+      <td><%= obj.send(attr_name) %></td>
+    </tr>
+  <% end %>
+</table>

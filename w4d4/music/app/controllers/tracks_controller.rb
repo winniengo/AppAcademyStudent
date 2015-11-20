@@ -1,5 +1,6 @@
 class TracksController < ApplicationController
   def index
+    @tracks = Track.all
   end
 
   def create
@@ -16,4 +17,7 @@ class TracksController < ApplicationController
 
   def update
   end
+
+  private
+
 end

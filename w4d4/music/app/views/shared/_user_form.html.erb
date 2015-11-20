@@ -1,22 +1,19 @@
-<input
-		type="hidden"
-		name="authenticity_token"
-		value="<%= form_authenticity_token %>">
+<%= render "shared/form_auth_token" %>
 
-	<label for="user_email">Email: </label>
+	<label for="user-email">Email: </label>
 	<input 
 		type="text"
 		name="user[email]"
-		id="user_email"
+		id="user-email"
 		value="<%= user.email %>">
 
 	<br>
 
-	<label for="user_password">Password: </label>
+	<label for="user-password">Password: </label>
 	<input
 		type="text"
 		name="user[password]"
-		id="user_password"
+		id="user-password"
 		value="<%= user.password %>">
 
 	<br>

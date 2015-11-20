@@ -1,2 +1,7 @@
-<h1>Albums#show</h1>
-<p>Find me in app/views/albums/show.html.erb</p>
+<h1>Album Profile</h1>
+
+<%= render "shared/profile", obj: @album, attributes: [:album_name, :status, :band_id] %>
+<!-- TODO: band name -->
+
+<br>
+<%= link_to "Edit album", edit_album_url(@album) %>

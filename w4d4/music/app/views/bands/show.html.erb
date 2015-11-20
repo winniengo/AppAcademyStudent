@@ -1,2 +1,8 @@
-<h1>Bands#show</h1>
-<p>Find me in app/views/bands/show.html.erb</p>
+<h1>Band Profile</h1>
+
+<%= render "shared/profile", obj: @band, attributes: [:name] %>
+
+<br>
+<%= link_to "Edit band", edit_band_url(@band) %>
+<br>
+<%= link_to "Back", bands_url %>

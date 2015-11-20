@@ -1,0 +1,22 @@
+<% action = (album.persisted? ? album_url(album) : albums_url) %>
+<% method = (album.persisted? ? :patch : :post) %>
+<% submit_text = (album.persisted? ? 'Update' : 'Create ') + 'album!' %>
+
+<form action="<%= action %>" method="post">
+  <input type="hidden" name="_method" value="<%= method %>">
+  
+  <%= render "shared/form_auth_token" %>
+
+  <label for="album_name">Name:</label>
+  <input
+    type="text"
+    name="album[album_name]"
+    id="album_name"
+    value="<%= album.album_name %>">
+
+    
+
+  <br>
+  <br>
+  <input type="submit" value="<%= submit_text %>">
+</form>
