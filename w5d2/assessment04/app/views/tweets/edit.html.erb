@@ -1,0 +1,7 @@
+<h1>Edit Tweet</h1>
+
+<%= render "form",
+  tweet: @tweet,
+  url: tweet_url(@tweet),
+  hidden_method: "patch",
+  submit_text: "Update Tweet"%>

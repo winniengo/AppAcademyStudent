@@ -1,0 +1,14 @@
+<form action="<%= url %>" method="post">
+  <input type="hidden" name="_method" value="<%= method %>">
+  <%= render "shared/form_auth_token" %>
+  <label>Title
+    <input type="text" name="link[title]" value="<%= @link.title %>">
+  </label>
+  <br>
+  <label>URL
+    <input type="text" name="link[url]" value="<%= @link.url %>">
+  </label>
+  <br>
+  <br>
+  <input type="submit" value="<%= submit_text %>">
+</form>
