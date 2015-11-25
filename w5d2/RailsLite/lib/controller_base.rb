@@ -15,6 +15,7 @@ class ControllerBase
     @res = res
     @params = req.params.merge(route_params)
     @already_built_response = false
+    @session = Session.new(req)
   end
 
   # Helper method to alias @already_built_response
