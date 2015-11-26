@@ -8,7 +8,7 @@ class Flash
   end
 
   def [](key)
-    @flash_now[key] || @flash[key]
+    @flash_now[key.to_sym] || @flash[key]
   end
 
   def []=(key, val)
